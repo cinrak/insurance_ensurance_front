@@ -1,0 +1,43 @@
+Additionally, some packages in these conflicts have no matching distributions available for your environment:
+    torch
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip to attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+niklas@Niklass-MacBook-Pro insuranceensurance % .venv/bin/pip install "$pkg" >/dev/null 2>&1 && echo "OK $pkg" || echo "FAIL $pkg" done
+OK 
+niklas@Niklass-MacBook-Pro insuranceensurance % .venv/bin/python --version; uname -m; .venv/bin/pip --version
+Python 3.15.0
+arm64
+pip 26.2.1 from /Users/niklas/Documents/Koodit/insuranceensurance/.venv/lib/python3.15/site-packages/pip (python 3.15)
+niklas@Niklass-MacBook-Pro insuranceensurance % .venv/bin/python install -r backend/requirements.txt 2>&1 | tail -n 25
+/Library/Frameworks/Python.framework/Versions/3.15/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/niklas/Documents/Koodit/insuranceensurance/install': [Errno 2] No such file or directory
+niklas@Niklass-MacBook-Pro insuranceensurance % .venv/bin/pip install -r backend/requirements.txt 2>&1 | tail -n 25
+    sentence-transformers 0.3.4 depends on torch>=1.2.0
+    sentence-transformers 0.3.3 depends on torch>=1.2.0
+    sentence-transformers 0.3.2 depends on torch>=1.2.0
+    sentence-transformers 0.3.1 depends on torch>=1.2.0
+    sentence-transformers 0.3.0 depends on torch>=1.0.1
+    sentence-transformers 0.2.6.2 depends on torch>=1.0.1
+    sentence-transformers 0.2.6.1 depends on torch>=1.0.1
+    sentence-transformers 0.2.5.1 depends on torch>=1.0.1
+    sentence-transformers 0.2.5 depends on torch>=1.0.1
+    sentence-transformers 0.2.4.1 depends on torch>=1.0.1
+    sentence-transformers 0.2.4 depends on torch>=1.0.1
+    sentence-transformers 0.2.3 depends on torch>=1.0.1
+    sentence-transformers 0.2.2 depends on torch>=1.0.1
+    sentence-transformers 0.2.1 depends on torch>=1.0.1
+    sentence-transformers 0.2.0 depends on torch>=1.0.1
+    sentence-transformers 0.1.0 depends on torch>=1.0.1
+
+Additionally, some packages in these conflicts have no matching distributions available for your environment:
+    torch
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip to attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+niklas@Niklass-MacBook-Pro insuranceensurance %                 
