@@ -12,12 +12,8 @@ const sidebarOpen = ref(false)
       <div v-if="sidebarOpen" class="sidebar-overlay" @click="sidebarOpen = false">
         <nav class="sidebar">
           <ul>
-            <li>
-              <router-link to="/">Home</router-link>
-            </li>
-            <li>
-              <router-link to="/download">Download insurance documents</router-link>
-            </li>
+            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/upload">Upload insurance documents</router-link></li>
           </ul>
         </nav>
       </div>
@@ -28,9 +24,7 @@ const sidebarOpen = ref(false)
 </template>
 
 <style scoped>
-.app {
-  position: relative;
-}
+.app { position: relative; }
 
 .hamburger {
   position: fixed;
@@ -38,16 +32,14 @@ const sidebarOpen = ref(false)
   right: 16px;
   z-index: 100;
   font-size: 24px;
-  background: var(--text-h, #111);
-  color: var(--text, #fff);
-  border: none;
-  border-radius: 6px;
   width: 44px;
   height: 44px;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--accent);
+  color: var(--text);
+  border-radius: var(--radius);
 }
 
 .sidebar-overlay {
@@ -63,8 +55,8 @@ const sidebarOpen = ref(false)
   right: 0;
   bottom: 0;
   width: 280px;
-  background: var(--bg, #0f0022);
-  border-left: 1px solid var(--border, #ccc);
+  background: var(--bg);
+  border-left: 1px solid var(--border);
   padding: 20px;
   z-index: 100;
 }
@@ -76,7 +68,7 @@ const sidebarOpen = ref(false)
 }
 
 .sidebar li a {
-  color: var(--text, #fff);
+  color: var(--text);
   text-decoration: none;
   font-size: 16px;
 }

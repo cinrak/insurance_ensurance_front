@@ -1,37 +1,31 @@
 <script setup>
-import { ref } from 'vue'
+import { useTypingEffect } from '../composables/useTypingEffect.js'
 
-const inputText = ref('')
+const { displayText } = useTypingEffect([
+  'Enter a new item',
+  'Phone',
+  'Laptop',
+  'Desktop'
+])
 </script>
 
 <template>
-  <main class="page">
+  <main class="page page-centered">
     <h1>Insurance App</h1>
     <input
       type="text"
-      v-model="inputText"
-      placeholder="Enter text..."
+      :placeholder="displayText"
+      class="home-input"
     />
   </main>
 </template>
 
 <style scoped>
-.page {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-h1 {
-  margin-bottom: 16px;
-}
-
-input {
-  width: 100%;
-  padding: 10px 14px;
-  font-size: 16px;
-  border: 1px solid var(--border, #ccc);
-  border-radius: 6px;
-  box-sizing: border-box;
+.home-input {
+  font-size: 18px;
+  padding: 14px 16px;
+  height: 56px;
+  width: 400px;
+  max-width: 100%;
 }
 </style>
