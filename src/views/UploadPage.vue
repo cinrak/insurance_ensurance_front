@@ -57,10 +57,10 @@ async function uploadFiles() {
   uploading.value = true
   const formData = new FormData()
   for (const file of files.value) {
-    formData.append('documents', file)
+    formData.append('file', file)
   }
   try {
-    await fetch('/api/upload', { method: 'POST', body: formData })
+    await fetch('/api/contracts', { method: 'POST', body: formData })
     files.value = []
   } catch (err) {
     console.error('Upload failed', err)
